@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MoneyReportController {
     @GetMapping("/")
     public String get(){
-        return "KEK";
+        return "K EK";
     }
 }
