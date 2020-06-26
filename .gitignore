@@ -4,6 +4,11 @@ target/
 !**/src/main/**
 !**/src/test/**
 
+### FRONT ###
+front-budget_calculator/node_modules/
+front-budget_calculator/dist
+front-budget_calculator/public
+
 ### STS ###
 .apt_generated
 .classpath

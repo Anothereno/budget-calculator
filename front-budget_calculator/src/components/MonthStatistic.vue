@@ -15,10 +15,12 @@
                   <v-col>
                     <v-list-item-title class="headline mb-1">{{getMonth}}</v-list-item-title>
                   </v-col>
+                  <v-spacer></v-spacer>
                   <v-col cols="auto">
                     <v-btn text class="text-decoration-underline" large>Статистика</v-btn>
                   </v-col>
                 </v-row>
+                <v-spacer></v-spacer>
                 <v-row>
                   <v-col cols="3"></v-col>
                   <v-col
