@@ -1,8 +1,8 @@
 <template>
   <v-content>
     <v-row>
-      <v-col cols="3"></v-col>
-      <v-col cols="6">
+      <v-col cols="2"></v-col>
+      <v-col cols="8">
         <template>
           <v-card
             class="mx-auto"
@@ -29,7 +29,6 @@
                     class="py-5"
                   >
                     <v-btn-toggle
-                      v-model="text"
                       tile
                       mandatory
                       color="deep-purple accent-3"
@@ -46,6 +45,34 @@
                   <v-col cols="3"></v-col>
                 </v-row>
                 <half-month-report v-if="isPrepaid"></half-month-report>
+                <v-row justify="center">
+                  <v-col cols="6">
+                    <v-subheader>Суммарный доход за месяц:</v-subheader>
+                  </v-col>
+                  <v-col cols="auto">
+                    <v-text-field
+                      label="Сумма"
+                      value="10"
+                      outlined
+                      :readonly="true"
+                      prefix="₽"
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
+                <v-row justify="center">
+                  <v-col cols="6">
+                    <v-subheader>Общая отложенная сумма за месяц:</v-subheader>
+                  </v-col>
+                  <v-col cols="auto">
+                    <v-text-field
+                      label="Сумма"
+                      value="10"
+                      outlined
+                      :readonly="true"
+                      prefix="₽"
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
               </v-list-item-content>
             </v-list-item>
           </v-card>
