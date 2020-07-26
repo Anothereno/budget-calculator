@@ -70,7 +70,18 @@
 export default {
   name: 'HalfMonthReport',
   data: function () {
-    return {}
+    return {
+      planSpendings: 13000,
+      currentSpendings: 7000
+    }
+  },
+  computed: {
+    getPlanSpendings () {
+      return this.planSpendings
+    },
+    getCurrentSpendings () {
+      return this.currentSpendings
+    }
   }
 }
 </script>

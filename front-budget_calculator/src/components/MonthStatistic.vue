@@ -1,42 +1,41 @@
 <template>
-  <v-content>
+  <v-content fluid>
     <v-row>
-      <v-col cols="2"></v-col>
-      <v-col cols="8">
+      <v-col cols="3"></v-col>
+      <v-col cols="6">
         <template>
           <v-card
             class="mx-auto"
-            max-width="80%"
             outlined
           >
             <v-list-item three-line>
               <v-list-item-content>
                 <v-row align="center" justify="center">
                   <v-col>
-                    <v-list-item-title class="headline mb-1">{{getMonth}}</v-list-item-title>
+                    <v-list-item-title class="headline mb-1">Месяц: {{getMonth}}</v-list-item-title>
                   </v-col>
-                  <v-spacer></v-spacer>
                   <v-col cols="auto">
                     <v-btn text class="text-decoration-underline" large>Статистика</v-btn>
                   </v-col>
                 </v-row>
                 <v-spacer></v-spacer>
-                <v-row>
+                <v-row justify="center" align="center ">
                   <v-col cols="3"></v-col>
                   <v-col
-                    cols="6"
-                    sm="6"
+                    cols="auto"
+                    sm="auto"
                     class="py-5"
                   >
                     <v-btn-toggle
-                      tile
+                      v-model="text"
                       mandatory
                       color="deep-purple accent-3"
                       group
-                    >
+                    ><v-spacer></v-spacer>
                       <v-btn @click="changePrepaid" value="prepaid">
                         Аванс
                       </v-btn>
+
                       <v-btn @click="changePrepaid" value="salary">
                         Зарплата
                       </v-btn>
@@ -103,7 +102,7 @@ export default {
   },
   computed: {
     getMonth () {
-      return 'Месяц: ' + this.month
+      return this.month
     }
   }
 }
