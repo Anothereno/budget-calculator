@@ -1,12 +1,12 @@
 package com.budgetcalculator.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
+@CrossOrigin(origins = "*")
+@RequestMapping("/money")
 public class MoneyReportController {
-    @GetMapping("/")
+    @RequestMapping(method = RequestMethod.GET, path = "/get")
     public String get(){
         return "K EK";
     }
